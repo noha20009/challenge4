@@ -1,0 +1,15 @@
+const prompt = require("prompt-sync")();
+const table = []
+for (let i = 0; i<3; i++){
+    table.push(prompt('Enter a chaine de character :'))
+}
+const valeur = prompt('Enter une valuer pour rechercher :')
+for (let i in table){
+    if (table[i] == valeur){
+        console.log("La chaîne", valeur, "a été trouvée à la position" ,Number(i + 1),".")
+        break
+    }
+    if (i == table.length -1 && table[i] != valeur){
+        console.log('value noT exist')
+    }
+}
